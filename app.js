@@ -29,3 +29,7 @@ proxy.on("siteDenied", function (url) {
 proxy.on("error", function (err) {
 	console.log("ERROR: ", err);
 });
+
+proxy.on("httpConnect", function (req) {
+	console.log("new HTTP CONNECT request: " + req.url);
+});
